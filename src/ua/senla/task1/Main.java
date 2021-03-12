@@ -44,6 +44,11 @@ public class Main {
         e = (char) f;
         System.out.println(e);
 
+        String color1 = "red ";
+        String color2 = "blue ";
+
+        String color3 = color1 + color2;
+        System.out.println(color3);
 
     }
 }

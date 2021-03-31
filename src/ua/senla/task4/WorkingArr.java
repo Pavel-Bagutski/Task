@@ -38,13 +38,51 @@ public class WorkingArr {
 
             }
         }
-            for (int r = 0; r < arr.length; r++) {
-                System.out.println(" ");
-                for (int t = 0; t < arr[r].length; t++) {
-                    System.out.print(arr[r][t] + " ");
 
-                }
+        for (int r = 0; r < arr.length; r++) {
+            System.out.println(" ");
+            for (int t = 0; t < arr[r].length; t++) {
+                System.out.print(arr[r][t] + " ");
+
+            }
+        }
+
+        System.out.println(" ");
+        String [] shortArray = new String[5];
+            int x = 0;
+            int y = 0;
+            x = (int)(Math.random() * 10);
+            y = (int)(Math.random() * 10);
+            System.out.println(x + " " + y);
+            for (int c = 0; c < shortArray.length; c++ ){
+                x = (int)(Math.random() * 10);
+                y = (int)(Math.random() * 10);
+                shortArray [c] = arr [x][y];
             }
 
+
+            //Need will work with - parse.double
+        Double doubleone = new Double(0);
+            double doubleArray [] = new double[5];
+            String [] strArray = new String[5];
+            int n = 0;
+            int m = 0;
+        for (int i = 0;i < shortArray.length; i++){
+            try {
+            //System.out.println(shortArray[i]);
+            doubleone = Double.parseDouble(shortArray [i]);
+            doubleArray [n] = doubleone;
+            System.out.println( "intArray " + doubleArray[n]);
+            n++;
+
+        }   catch (NumberFormatException e){
+                strArray [m] = shortArray[i];
+                System.out.println("strArray " + shortArray[m]);
+                m++;
+            }
         }
+
+            }
+
     }
+
